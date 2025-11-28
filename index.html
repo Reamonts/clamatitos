@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clamatitos - Miches and Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-text"><span class="logo-highlight">Clama</span>titos</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#promociones">Promociones</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="glitch" data-text="miches and food">Clamatitos</span>
+            </h1>
+            <p class="hero-subtitle typing-animation">> Miches and Food...</p>
+            <a href="#menu" class="btn-primary neon-button">[ ACCEDER AL MENÚ ]</a>
+        </div>
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <div class="scan-line"></div>
+            <div class="particles"></div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-title-text">[ MENÚ DEL SISTEMA ]</span>
+            </h2>
+            <p class="section-subtitle">> Cargando opciones disponibles...</p>
+            
+            <div class="menu-grid">
+                <div class="menu-card tech-card" data-category="hamburguesas">
+                    <h3 class="menu-item-title">HAMBURGUESAS</h3>
+                    <h4>Incluyen papas a la francesa</h4>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+
+                <div class="menu-card tech-card" data-category="hotdogs">
+                    <h3 class="menu-item-title">HOT DOGS</h3>
+                    <h4>Incluyen papas a la francesa</h4>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+
+                <div class="menu-card tech-card" data-category="alitas">
+                    <h3 class="menu-item-title">ALITAS</h3>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+
+                <div class="menu-card tech-card" data-category="papas">
+                    <h3 class="menu-item-title">PAPAS</h3>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+
+                <div class="menu-card tech-card" data-category="nachos">
+                    <h3 class="menu-item-title">NACHOS</h3>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+
+                <div class="menu-card tech-card" data-category="bebidas">
+                    <h3 class="menu-item-title">BEBIDAS</h3>
+                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promociones Section -->
+    <section id="promociones" class="promociones-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-title-text">[ PROMOCIONES ACTIVAS ]</span>
+            </h2>
+            <p class="section-subtitle">> Ofertas especiales disponibles</p>
+            
+            <div class="promociones-grid">
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Combo Familiar</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">2 Hamburguesas + 2 Hot Dogs + Papas Familiares + 4 Bebidas</p>
+                        <div class="promo-price">
+                            <span class="price-old">$45.99</span>
+                            <span class="price-new">$35.99</span>
+                        </div>
+                        <p class="promo-savings">Ahorra $10.00</p>
+                    </div>
+                </div>
+
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Alitas del Día</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">12 Alitas + Papas + Bebida (Lunes a Jueves)</p>
+                        <div class="promo-price">
+                            <span class="price-old">$24.99</span>
+                            <span class="price-new">$19.99</span>
+                        </div>
+                        <p class="promo-savings">Ahorra $5.00</p>
+                    </div>
+                </div>
+
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Happy Hour</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">2x1 en Bebidas (3:00 PM - 6:00 PM)</p>
+                        <div class="promo-price">
+                            <span class="price-new">50% OFF</span>
+                        </div>
+                        <p class="promo-savings">Todos los días</p>
+                    </div>
+                </div>
+
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Combo Estudiante</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">Hamburguesa + Papas + Bebida (Con credencial)</p>
+                        <div class="promo-price">
+                            <span class="price-old">$15.99</span>
+                            <span class="price-new">$12.99</span>
+                        </div>
+                        <p class="promo-savings">Ahorra $3.00</p>
+                    </div>
+                </div>
+
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Nachos Supremos</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">Nachos Supremos + 2 Bebidas</p>
+                        <div class="promo-price">
+                            <span class="price-old">$19.99</span>
+                            <span class="price-new">$15.99</span>
+                        </div>
+                        <p class="promo-savings">Ahorra $4.00</p>
+                    </div>
+                </div>
+
+                <div class="promo-card tech-card">
+                    <div class="promo-badge">OFERTA</div>
+                    <h3 class="promo-title">Fin de Semana Especial</h3>
+                    <div class="promo-content">
+                        <p class="promo-description">Cualquier Hamburguesa + Papas + Bebida (Sábados y Domingos)</p>
+                        <div class="promo-price">
+                            <span class="price-old">$18.99</span>
+                            <span class="price-new">$14.99</span>
+                        </div>
+                        <p class="promo-savings">Ahorra $4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Section -->
+    <section id="eventos" class="eventos-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-title-text">[ EVENTOS Y ACTIVIDADES ]</span>
+            </h2>
+            <p class="section-subtitle">> Próximos eventos programados</p>
+            
+            <div class="eventos-grid">
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Noche de Karaoke</h3>
+                        <p class="evento-time">8:00 PM - 11:00 PM</p>
+                        <p class="evento-description">Ven a cantar tus canciones favoritas mientras disfrutas de nuestra comida. ¡Premios para los mejores!</p>
+                        <div class="evento-tag">ENTRADA GRATIS</div>
+                    </div>
+                </div>
+
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Torneo de Videojuegos</h3>
+                        <p class="evento-time">6:00 PM - 10:00 PM</p>
+                        <p class="evento-description">Competencia de videojuegos con premios. Incluye combo especial para participantes.</p>
+                        <div class="evento-tag">INSCRIPCIÓN $5</div>
+                    </div>
+                </div>
+
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">28</span>
+                        <span class="date-month">ENE</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Noche de Trivia</h3>
+                        <p class="evento-time">7:00 PM - 9:00 PM</p>
+                        <p class="evento-description">Pon a prueba tus conocimientos. Equipos de hasta 4 personas. Premios en efectivo.</p>
+                        <div class="evento-tag">GRATIS</div>
+                    </div>
+                </div>
+
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">FEB</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Live Music Night</h3>
+                        <p class="evento-time">8:00 PM - 11:00 PM</p>
+                        <p class="evento-description">Disfruta de música en vivo con bandas locales. Ambiente relajado y buena comida.</p>
+                        <div class="evento-tag">ENTRADA GRATIS</div>
+                    </div>
+                </div>
+
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">12</span>
+                        <span class="date-month">FEB</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Día del Amor y la Amistad</h3>
+                        <p class="evento-time">Todo el día</p>
+                        <p class="evento-description">Combo especial para parejas. Incluye postre gratis. Reservaciones recomendadas.</p>
+                        <div class="evento-tag">PROMO ESPECIAL</div>
+                    </div>
+                </div>
+
+                <div class="evento-card tech-card">
+                    <div class="evento-date">
+                        <span class="date-day">20</span>
+                        <span class="date-month">FEB</span>
+                    </div>
+                    <div class="evento-content">
+                        <h3 class="evento-title">Noche de Juegos de Mesa</h3>
+                        <p class="evento-time">6:00 PM - 10:00 PM</p>
+                        <p class="evento-description">Trae tus juegos favoritos o usa los nuestros. Ambiente familiar y divertido.</p>
+                        <div class="evento-tag">GRATIS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="section-title-text">[ SISTEMA DE CONTACTO ]</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item tech-info">
+                        <div class="info-icon">[LOC]</div>
+                        <h3>UBICACIÓN</h3>
+                        <p class="info-text">> Visítanos en nuestro local</p>
+                        <div class="info-status">ONLINE</div>
+                    </div>
+                    <div class="info-item tech-info">
+                        <div class="info-icon">[TEL]</div>
+                        <h3>TELÉFONO</h3>
+                        <p class="info-text">> Llámanos para pedidos</p>
+                        <div class="info-status">ACTIVE</div>
+                    </div>
+                    <div class="info-item tech-info">
+                        <div class="info-icon">[TIME]</div>
+                        <h3>HORARIO</h3>
+                        <p class="info-text">> Lun - Dom: 10:00 AM - 10:00 PM</p>
+                        <div class="info-status">24/7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>> &copy; 2024 miches and food. Sistema operativo v2.0</p>
+            <p class="footer-code">> Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
