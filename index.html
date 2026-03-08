@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clamatitos - Miches and Food</title>
+    <title>Clamatitos - Bar familiar · Comida y buen ambiente</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -15,6 +15,7 @@
         <div class="container">
             <div class="logo">
                 <h1 class="logo-text"><span class="logo-highlight">Clama</span>titos</h1>
+                <span class="logo-tagline">Bar familiar</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="#inicio">Inicio</a></li>
@@ -34,16 +35,49 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="glitch" data-text="miches and food">Clamatitos</span>
-            </h1>
-            <p class="hero-subtitle typing-animation">> Miches and Food...</p>
-            <a href="#menu" class="btn-primary neon-button">[ ACCEDER AL MENÚ ]</a>
+            <p class="hero-welcome">Bienvenidos a</p>
+            <h1 class="hero-title">Clamatitos</h1>
+            <p class="hero-subtitle">Comida casera, buenos momentos y ambiente para toda la familia.</p>
+            <a href="#menu" class="btn-primary">Ver menú</a>
+
+            <div class="hero-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-item is-active">
+                        <img
+                            class="carousel-image"
+                            src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg"
+                            alt="Hamburguesas y papas servidas en mesa de bar familiar"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            class="carousel-image"
+                            src="https://images.pexels.com/photos/4317226/pexels-photo-4317226.jpeg"
+                            alt="Familias y amigos compartiendo en un bar acogedor"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            class="carousel-image"
+                            src="https://images.pexels.com/photos/5531523/pexels-photo-5531523.jpeg"
+                            alt="Tragos y botanas con iluminación cálida"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+                <button class="carousel-control prev" aria-label="Anterior">&#10094;</button>
+                <button class="carousel-control next" aria-label="Siguiente">&#10095;</button>
+                <div class="carousel-dots">
+                    <button class="carousel-dot is-active" data-index="0" aria-label="Slide 1"></button>
+                    <button class="carousel-dot" data-index="1" aria-label="Slide 2"></button>
+                    <button class="carousel-dot" data-index="2" aria-label="Slide 3"></button>
+                </div>
+            </div>
         </div>
         <div class="hero-background">
-            <div class="grid-overlay"></div>
-            <div class="scan-line"></div>
-            <div class="particles"></div>
+            <div class="hero-overlay"></div>
         </div>
     </section>
 
@@ -51,41 +85,41 @@
     <section id="menu" class="menu-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-title-text">[ MENÚ DEL SISTEMA ]</span>
+                <span class="section-title-text">Nuestro menú</span>
             </h2>
-            <p class="section-subtitle">> Cargando opciones disponibles...</p>
+            <p class="section-subtitle">Hamburguesas, hot dogs, alitas, papas y más. Elige tu favorito.</p>
             
             <div class="menu-grid">
                 <div class="menu-card tech-card" data-category="hamburguesas">
-                    <h3 class="menu-item-title">HAMBURGUESAS</h3>
+                    <h3 class="menu-item-title">Hamburguesas</h3>
                     <h4>Incluyen papas a la francesa</h4>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
 
                 <div class="menu-card tech-card" data-category="hotdogs">
-                    <h3 class="menu-item-title">HOT DOGS</h3>
+                    <h3 class="menu-item-title">Hot dogs</h3>
                     <h4>Incluyen papas a la francesa</h4>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
 
                 <div class="menu-card tech-card" data-category="alitas">
-                    <h3 class="menu-item-title">ALITAS</h3>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <h3 class="menu-item-title">Alitas</h3>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
 
                 <div class="menu-card tech-card" data-category="papas">
-                    <h3 class="menu-item-title">PAPAS</h3>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <h3 class="menu-item-title">Papas</h3>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
 
                 <div class="menu-card tech-card" data-category="nachos">
-                    <h3 class="menu-item-title">NACHOS</h3>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <h3 class="menu-item-title">Nachos</h3>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
 
                 <div class="menu-card tech-card" data-category="bebidas">
-                    <h3 class="menu-item-title">BEBIDAS</h3>
-                    <p class="menu-card-subtitle">Click para ver opciones</p>
+                    <h3 class="menu-item-title">Bebidas</h3>
+                    <p class="menu-card-subtitle">Ver opciones</p>
                 </div>
             </div>
         </div>
@@ -95,87 +129,50 @@
     <section id="promociones" class="promociones-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-title-text">[ PROMOCIONES ACTIVAS ]</span>
+                <span class="section-title-text">Promociones</span>
             </h2>
-            <p class="section-subtitle">> Ofertas especiales disponibles</p>
+            <p class="section-subtitle">Ofertas para disfrutar en familia o pareja. </p>
             
             <div class="promociones-grid">
                 <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Combo Familiar</h3>
+                    <div class="promo-badge">Viernes</div>
+                    <h3 class="promo-title">Combo Pareja</h3>
                     <div class="promo-content">
-                        <p class="promo-description">2 Hamburguesas + 2 Hot Dogs + Papas Familiares + 4 Bebidas</p>
+                        <p class="promo-description">2 Hamburguesas + 2 Litros de michelada</p>
                         <div class="promo-price">
-                            <span class="price-old">$45.99</span>
-                            <span class="price-new">$35.99</span>
+                            <span class="price-old">$300.00</span>
+                            <span class="price-new">$225.00</span>
                         </div>
-                        <p class="promo-savings">Ahorra $10.00</p>
+                        <p class="promo-savings">Ahorra $75.00</p>
                     </div>
                 </div>
 
                 <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Alitas del Día</h3>
+                    <div class="promo-badge">Sabado</div>
+                    <h3 class="promo-title">Combo Familia</h3>
                     <div class="promo-content">
-                        <p class="promo-description">12 Alitas + Papas + Bebida (Lunes a Jueves)</p>
+                        <p class="promo-description">16 Alitas + 2 Litros de michelada</p>
                         <div class="promo-price">
-                            <span class="price-old">$24.99</span>
-                            <span class="price-new">$19.99</span>
+                            <span class="price-old">$290.00</span>
+                            <span class="price-new">$220.00</span>
                         </div>
-                        <p class="promo-savings">Ahorra $5.00</p>
+                        <p class="promo-savings">Ahorra $70.00</p>
                     </div>
                 </div>
 
                 <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Happy Hour</h3>
+                    <div class="promo-badge">Domingo</div>
+                    <h3 class="promo-title">Combo Individual</h3>
                     <div class="promo-content">
-                        <p class="promo-description">2x1 en Bebidas (3:00 PM - 6:00 PM)</p>
+                        <p class="promo-description">En la compra de cualquier hamburguesa, booneles con papas o Hot dog, la babida es gratis (refresco, cantarito, cerveza de 1/2 xx, limonada o rusa)</p>
                         <div class="promo-price">
-                            <span class="price-new">50% OFF</span>
+                            <span class="price-old"></span>
+                            <span class="price-new">bebida gratis</span>
                         </div>
-                        <p class="promo-savings">Todos los días</p>
+                        <p class="promo-savings">Ven por tu bebida</p>
                     </div>
                 </div>
 
-                <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Combo Estudiante</h3>
-                    <div class="promo-content">
-                        <p class="promo-description">Hamburguesa + Papas + Bebida (Con credencial)</p>
-                        <div class="promo-price">
-                            <span class="price-old">$15.99</span>
-                            <span class="price-new">$12.99</span>
-                        </div>
-                        <p class="promo-savings">Ahorra $3.00</p>
-                    </div>
-                </div>
-
-                <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Nachos Supremos</h3>
-                    <div class="promo-content">
-                        <p class="promo-description">Nachos Supremos + 2 Bebidas</p>
-                        <div class="promo-price">
-                            <span class="price-old">$19.99</span>
-                            <span class="price-new">$15.99</span>
-                        </div>
-                        <p class="promo-savings">Ahorra $4.00</p>
-                    </div>
-                </div>
-
-                <div class="promo-card tech-card">
-                    <div class="promo-badge">OFERTA</div>
-                    <h3 class="promo-title">Fin de Semana Especial</h3>
-                    <div class="promo-content">
-                        <p class="promo-description">Cualquier Hamburguesa + Papas + Bebida (Sábados y Domingos)</p>
-                        <div class="promo-price">
-                            <span class="price-old">$18.99</span>
-                            <span class="price-new">$14.99</span>
-                        </div>
-                        <p class="promo-savings">Ahorra $4.00</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -184,9 +181,9 @@
     <section id="eventos" class="eventos-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-title-text">[ EVENTOS Y ACTIVIDADES ]</span>
+                <span class="section-title-text">Eventos</span>
             </h2>
-            <p class="section-subtitle">> Próximos eventos programados</p>
+            <p class="section-subtitle">Karaoke, torneos, trivia y más. ¡Te esperamos!</p>
             
             <div class="eventos-grid">
                 <div class="evento-card tech-card">
@@ -274,27 +271,27 @@
     <section id="contacto" class="contact-section">
         <div class="container">
             <h2 class="section-title">
-                <span class="section-title-text">[ SISTEMA DE CONTACTO ]</span>
+                <span class="section-title-text">Contacto</span>
             </h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="info-item tech-info">
-                        <div class="info-icon">[LOC]</div>
-                        <h3>UBICACIÓN</h3>
-                        <p class="info-text">> Visítanos en nuestro local</p>
-                        <div class="info-status">ONLINE</div>
+                        <div class="info-icon">📍</div>
+                        <h3>Ubicación</h3>
+                        <p class="info-text">Visítanos en nuestro local</p>
+                        <div class="info-status">Abierto</div>
                     </div>
                     <div class="info-item tech-info">
-                        <div class="info-icon">[TEL]</div>
-                        <h3>TELÉFONO</h3>
-                        <p class="info-text">> Llámanos para pedidos</p>
-                        <div class="info-status">ACTIVE</div>
+                        <div class="info-icon">📞</div>
+                        <h3>Teléfono</h3>
+                        <p class="info-text">Llámanos para pedidos</p>
+                        <div class="info-status">Disponible</div>
                     </div>
                     <div class="info-item tech-info">
-                        <div class="info-icon">[TIME]</div>
-                        <h3>HORARIO</h3>
-                        <p class="info-text">> Lun - Dom: 10:00 AM - 10:00 PM</p>
-                        <div class="info-status">24/7</div>
+                        <div class="info-icon">🕐</div>
+                        <h3>Horario</h3>
+                        <p class="info-text">Lun - Dom: 10:00 AM - 10:00 PM</p>
+                        <div class="info-status">Te esperamos</div>
                     </div>
                 </div>
             </div>
@@ -304,8 +301,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>> &copy; 2024 miches and food. Sistema operativo v2.0</p>
-            <p class="footer-code">> Todos los derechos reservados.</p>
+            <p>© 2024 Clamatitos · Bar familiar</p>
+            <p class="footer-code">Comida, bebidas y buen ambiente para toda la familia.</p>
         </div>
     </footer>
 

@@ -247,13 +247,13 @@ const navbar = document.querySelector('.navbar');
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        navbar.style.borderBottomColor = 'var(--primary-color)';
-    } else {
-        navbar.style.borderBottomColor = 'var(--border-color)';
+    if (navbar) {
+        if (currentScroll > 80) {
+            navbar.style.boxShadow = '0 4px 24px rgba(44, 24, 16, 0.12)';
+        } else {
+            navbar.style.boxShadow = '0 2px 20px rgba(44, 24, 16, 0.08)';
+        }
     }
-    
     lastScroll = currentScroll;
 });
 
@@ -381,44 +381,91 @@ document.querySelectorAll('.evento-card').forEach(card => {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const hero = document.querySelector('.hero');
-    const gridOverlay = document.querySelector('.grid-overlay');
-    
     if (hero && scrolled < window.innerHeight) {
-        hero.style.transform = `translateY(${scrolled * 0.3}px)`;
-    }
-    
-    if (gridOverlay) {
-        gridOverlay.style.transform = `translate(${scrolled * 0.1}px, ${scrolled * 0.1}px)`;
+        hero.style.transform = `translateY(${scrolled * 0.2}px)`;
     }
 });
 
-// Text typing effect for hero subtitle
-function typeWriter(element, text, speed = 50) {
-    if (!element) return;
-    
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
+// Hero carousel
+(function initHeroCarousel() {
+    const track = document.querySelector('.hero-carousel .carousel-track');
+    const items = document.querySelectorAll('.hero-carousel .carousel-item');
+    const dots = document.querySelectorAll('.hero-carousel .carousel-dot');
+    const prevBtn = document.querySelector('.hero-carousel .carousel-control.prev');
+    const nextBtn = document.querySelector('.hero-carousel .carousel-control.next');
+
+    if (!track || items.length === 0) return;
+
+    let currentIndex = 0;
+    let autoTimer = null;
+    const AUTO_INTERVAL = 6000;
+
+    function setActive(index) {
+        items.forEach((item, i) => {
+            item.classList.toggle('is-active', i === index);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('is-active', i === index);
+        });
+        track.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+    }
+
+    function next() {
+        const index = (currentIndex + 1) % items.length;
+        setActive(index);
+    }
+
+    function prev() {
+        const index = (currentIndex - 1 + items.length) % items.length;
+        setActive(index);
+    }
+
+    function startAuto() {
+        stopAuto();
+        autoTimer = setInterval(next, AUTO_INTERVAL);
+    }
+
+    function stopAuto() {
+        if (autoTimer) {
+            clearInterval(autoTimer);
+            autoTimer = null;
         }
     }
-    
-    type();
-}
 
-// Initialize typing animation
-const heroSubtitle = document.querySelector('.hero-subtitle');
-if (heroSubtitle) {
-    const originalText = heroSubtitle.textContent;
-    heroSubtitle.textContent = '';
-    setTimeout(() => {
-        typeWriter(heroSubtitle, originalText, 30);
-    }, 1000);
-}
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            next();
+            startAuto();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prev();
+            startAuto();
+        });
+    }
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = parseInt(dot.getAttribute('data-index'), 10);
+            if (!isNaN(index)) {
+                setActive(index);
+                startAuto();
+            }
+        });
+    });
+
+    const heroCarousel = document.querySelector('.hero-carousel');
+    if (heroCarousel) {
+        heroCarousel.addEventListener('mouseenter', stopAuto);
+        heroCarousel.addEventListener('mouseleave', startAuto);
+    }
+
+    setActive(0);
+    startAuto();
+})();
 
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -426,7 +473,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            const offsetTop = target.offsetTop - 80;
+            const offsetTop = target.offsetTop - 70;
             window.scrollTo({
                 top: offsetTop,
                 behavior: 'smooth'
@@ -435,15 +482,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add loading animation
+// Page load animation
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
+    document.body.style.transition = 'opacity 0.4s ease';
     setTimeout(() => {
         document.body.style.opacity = '1';
-    }, 100);
+    }, 80);
 });
 
-console.log('> Sistema miches and food inicializado...');
-console.log('> Versión 2.0 - Tech Food Experience');
+console.log('Clamatitos · Bar familiar');
